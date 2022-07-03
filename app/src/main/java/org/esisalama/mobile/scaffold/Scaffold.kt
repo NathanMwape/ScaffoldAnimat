@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.RectangleShape
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.text.font.FontStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -29,11 +30,15 @@ import kotlinx.coroutines.launch
 @Composable
 fun LaunchSceen() {
     Surface() {
-        Image(
-            painter = painterResource(id = R.drawable.paysage3), contentDescription = "",
-            modifier = Modifier.fillMaxSize(),
-            contentScale = ContentScale.Crop
-        )
+        Box(contentAlignment = Alignment.BottomCenter ) {
+            Image(
+                painter = painterResource(id = R.drawable.paysage3), contentDescription = "",
+                modifier = Modifier.fillMaxSize(),
+                contentScale = ContentScale.Crop
+            )
+            Text(text = "Screen Splash")
+        }
+
     }
 }
 
@@ -150,9 +155,8 @@ fun themeDeux() {
             Text(text =" Paysage 3", fontWeight = FontWeight.Bold, color = Color.White)
         }
     }
-
-
 }
+
 
 @Preview
 @Composable
